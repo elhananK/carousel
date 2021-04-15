@@ -1,0 +1,32 @@
+<div class="carousel">
+    <nic-arrow rotate [disabled]="slideIndex === 0" (whenClicked)="arrowClicked(-3)"></nic-arrow>
+
+    <article #carouselRef>
+        <section [ngStyle]="{
+        transform: 'translateX(-' + slideWidth * slideIndex + 'px)'
+      }">
+            <ng-content>
+
+            </ng-content>
+
+
+        </section>
+
+    </article>
+
+
+
+    <nic-arrow [disabled]="slideIndex + 3 >= slides.length" (whenClicked)="arrowClicked(3)"></nic-arrow>
+
+
+</div>
+
+<div class="hide">
+
+    <input type="checkbox" #checkboxRef *ngFor="let slide of slides; let index = index" (keyup)="keyup($event)" (focus)="focus(index)"> {{slideIndex}}
+
+</div>
+
+<ng-content select="nic-navigation">
+
+</ng-content>

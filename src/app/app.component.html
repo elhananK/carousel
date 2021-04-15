@@ -1,0 +1,13 @@
+<nic-carousel (slideIndexChange)="selectedIndex = $event">
+
+    <nic-slide *ngFor="let cart of slides; let index = index">
+
+        <nic-cart [selected]="selectedIndex === index" [index]="index" (whenShow)="printTitle($event)" [cart]="cart">
+        </nic-cart>
+
+    </nic-slide>
+
+    <nic-navigation></nic-navigation>
+
+
+</nic-carousel>

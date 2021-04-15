@@ -1,0 +1,25 @@
+
+@import 'src/styles/declarations';
+
+svg {
+  width: 30px;
+  margin: $main-space;
+  box-shadow: 0 0 0 1px $main-border;
+  padding: $main-space;
+  border-radius: $main-space / 2;
+  transition: background .3s ease;
+  cursor: pointer;
+  &.disabled {
+    background-color:$main-disabled;
+    box-shadow: 0 0 0 1px $main-disabled;
+    fill: white;
+    cursor: not-allowed;
+  }
+  &.rotate {
+    transform: rotateY(180deg);
+  }
+  &:not(.disabled):hover {
+    fill: white;
+    background-color: $main-color;
+  }
+}

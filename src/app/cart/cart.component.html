@@ -1,0 +1,24 @@
+
+<label [ngClass]="{selected: selected}" >
+
+  <img src="https://picsum.photos/40/60" alt="cart-image">
+
+  <h2> <span [ngStyle]="{ 'background-color': cart.color }"></span> {{cart.title}}</h2>
+  <label >{{cart.blocked}} blocked opportunities. </label>
+
+  <section>
+    <label>Violation</label>
+    <p>The service couldnt be scheduled becouse there is no matching slot to the given appointment window</p>
+  </section>
+
+  <section>
+    <label>Recommended Actions</label>
+    <p>Try expanding, chamging or deleting the appointment window if possible</p>
+  </section>
+
+  <div class="actions">
+    <a (click)="whenShow.emit(cart.title)">Show</a>
+    <a>Open Rule <nic-large-arrow></nic-large-arrow></a>
+  </div>
+
+</label>

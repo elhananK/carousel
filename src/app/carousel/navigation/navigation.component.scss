@@ -1,0 +1,24 @@
+@import 'src/styles/declarations';
+
+
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px $main-border;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin: $main-space;
+  cursor: pointer;
+  transition: all .3s ease;
+  &:hover, &.selected {
+    background-color: $main-color;
+  }
+}
+
+

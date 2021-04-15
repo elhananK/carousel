@@ -1,0 +1,5 @@
+<ng-container *ngFor="let slide of slides; let index = index;">
+
+    <span *ngIf="index % 3 === 0" [ngClass]="{selected: slideIndex === index}" (click)="slideCarousel(index)"></span>
+
+</ng-container>

@@ -1,0 +1,8 @@
+@import 'src/styles/declarations';
+
+svg {
+  width: 15px;
+  padding: 0px 2px;
+  transform: translateY(2px);
+  fill: $main-color;
+}
